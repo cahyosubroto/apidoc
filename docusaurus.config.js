@@ -9,7 +9,7 @@ const config = {
   title: 'Babylon Blockchain',
   tagline: 'Bringing Bitcoin Security to Cosmos & Beyond',
   url: 'https://cahyosubroto.github.io',
-  baseUrl: '/',
+  baseUrl: '/apidoc/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'https://drive.google.com/uc?export=view&id=1LXiSzeRGG1Ij-YLozx9GcYmpmrOVBzBE',
