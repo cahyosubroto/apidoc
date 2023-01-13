@@ -1,0 +1,38 @@
+---
+id: contains
+title: "Contains checks whether a hash is maintained by the module."
+description: "Contains checks whether a hash is maintained by the module."
+sidebar_label: "Contains checks whether a hash is maintained by the module."
+hide_title: true
+hide_table_of_contents: true
+api: {"operationId":"Contains","responses":{"200":{"description":"A successful response.","content":{"*/*":{"schema":{"type":"object","properties":{"contains":{"type":"boolean"}},"description":"QueryContainsResponse is response type for the Query/Contains RPC method."}}}},"default":{"description":"An unexpected error response.","content":{"*/*":{"schema":{"type":"object","properties":{"error":{"type":"string"},"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"details":{"type":"array","items":{"type":"object","properties":{"type_url":{"type":"string"},"value":{"type":"string","format":"byte"}}}}}}}}}},"parameters":[{"name":"hash","in":"query","required":false,"schema":{"type":"string","format":"byte"}}],"tags":["Query"],"description":"Contains checks whether a hash is maintained by the module.","method":"get","path":"/babylon/btclightclient/v1/contains","info":{"title":"Babylon - gRPC Gateway docs","description":"A REST interface for state queries","version":"1.0.0"},"postman":{"name":"Contains checks whether a hash is maintained by the module.","description":{"type":"text/plain"},"url":{"path":["babylon","btclightclient","v1","contains"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"key":"hash","value":""}],"variable":[]},"header":[{"key":"Accept","value":"*/*"}],"method":"GET"}}
+sidebar_class_name: "get api-method"
+info_path: api/grpcrestapi/babylon-grpc-gateway-docs
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import TabItem from "@theme/TabItem";
+
+## Contains checks whether a hash is maintained by the module.
+
+
+
+Contains checks whether a hash is maintained by the module.
+
+<details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Query Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"hash","in":"query","required":false,"schema":{"type":"string","format":"byte"}}}></ParamsItem></ul></div></details><div><ApiTabs><TabItem label={"200"} value={"200"}><div>
+
+A successful response.
+
+</div><div><MimeTabs schemaType={"response"}><TabItem label={"*/*"} value={"*/*"}><SchemaTabs><TabItem label={"Schema"} value={"Schema"}><details style={{}} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"contains"} required={false} deprecated={undefined} schemaDescription={undefined} schemaName={"boolean"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem></ul></details></TabItem><TabItem label={"Example (from schema)"} value={"Example (from schema)"}><ResponseSamples responseExample={"{\n  \"contains\": true\n}"} language={"json"}></ResponseSamples></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem><TabItem label={"default"} value={"default"}><div>
+
+An unexpected error response.
+
+</div><div><MimeTabs schemaType={"response"}><TabItem label={"*/*"} value={"*/*"}><SchemaTabs><TabItem label={"Schema"} value={"Schema"}><details style={{}} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"error"} required={false} deprecated={undefined} schemaDescription={undefined} schemaName={"string"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"code"} required={false} deprecated={undefined} schemaDescription={undefined} schemaName={"int32"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"message"} required={false} deprecated={undefined} schemaDescription={undefined} schemaName={"string"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={true} className={"schemaItem"}><details style={{}}><summary style={{}}><strong>details</strong><span style={{"opacity":"0.6"}}> object[]</span></summary><div style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"type_url"} required={false} deprecated={undefined} schemaDescription={undefined} schemaName={"string"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"value"} required={false} deprecated={undefined} schemaDescription={undefined} schemaName={"byte"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem></div></details></SchemaItem></ul></details></TabItem><TabItem label={"Example (from schema)"} value={"Example (from schema)"}><ResponseSamples responseExample={"{\n  \"error\": \"string\",\n  \"code\": 0,\n  \"message\": \"string\",\n  \"details\": [\n    {\n      \"type_url\": \"string\",\n      \"value\": \"string\"\n    }\n  ]\n}"} language={"json"}></ResponseSamples></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem></ApiTabs></div>
+      

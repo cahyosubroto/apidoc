@@ -1,0 +1,38 @@
+---
+id: epoch-status
+title: "EpochStatus queries the status of the checkpoint at a given epoch"
+description: "EpochStatus queries the status of the checkpoint at a given epoch"
+sidebar_label: "EpochStatus queries the status of the checkpoint at a given epoch"
+hide_title: true
+hide_table_of_contents: true
+api: {"operationId":"EpochStatus","responses":{"200":{"description":"A successful response.","content":{"*/*":{"schema":{"type":"object","properties":{"status":{"type":"string","enum":["CKPT_STATUS_ACCUMULATING","CKPT_STATUS_SEALED","CKPT_STATUS_SUBMITTED","CKPT_STATUS_CONFIRMED","CKPT_STATUS_FINALIZED"],"default":"CKPT_STATUS_ACCUMULATING","description":"CkptStatus is the status of a checkpoint.\n\n - CKPT_STATUS_ACCUMULATING: ACCUMULATING defines a checkpoint that is awaiting for BLS signatures.\n - CKPT_STATUS_SEALED: SEALED defines a checkpoint that has accumulated sufficient BLS signatures.\n - CKPT_STATUS_SUBMITTED: SUBMITTED defines a checkpoint that is included on BTC.\n - CKPT_STATUS_CONFIRMED: CONFIRMED defines a checkpoint that is k-deep on BTC.\n - CKPT_STATUS_FINALIZED: FINALIZED defines a checkpoint that is w-deep on BTC."}},"description":"QueryEpochStatusResponse is the response type for the Query/EpochStatus\nRPC method."}}}},"default":{"description":"An unexpected error response.","content":{"*/*":{"schema":{"type":"object","properties":{"error":{"type":"string"},"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"details":{"type":"array","items":{"type":"object","properties":{"type_url":{"type":"string"},"value":{"type":"string","format":"byte"}}}}}}}}}},"parameters":[{"name":"epoch_num","in":"path","required":true,"schema":{"type":"string","format":"uint64"}}],"tags":["Query"],"description":"EpochStatus queries the status of the checkpoint at a given epoch","method":"get","path":"/babylon/checkpointing/v1/epochs/{epoch_num}/status","info":{"title":"Babylon - gRPC Gateway docs","description":"A REST interface for state queries","version":"1.0.0"},"postman":{"name":"EpochStatus queries the status of the checkpoint at a given epoch","description":{"type":"text/plain"},"url":{"path":["babylon","checkpointing","v1","epochs",":epoch_num","status"],"host":["{{baseUrl}}"],"query":[],"variable":[{"disabled":false,"description":{"content":"(Required) ","type":"text/plain"},"type":"any","value":"","key":"epoch_num"}]},"header":[{"key":"Accept","value":"*/*"}],"method":"GET"}}
+sidebar_class_name: "get api-method"
+info_path: api/grpcrestapi/babylon-grpc-gateway-docs
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import TabItem from "@theme/TabItem";
+
+## EpochStatus queries the status of the checkpoint at a given epoch
+
+
+
+EpochStatus queries the status of the checkpoint at a given epoch
+
+<details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Path Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"epoch_num","in":"path","required":true,"schema":{"type":"string","format":"uint64"}}}></ParamsItem></ul></div></details><div><ApiTabs><TabItem label={"200"} value={"200"}><div>
+
+A successful response.
+
+</div><div><MimeTabs schemaType={"response"}><TabItem label={"*/*"} value={"*/*"}><SchemaTabs><TabItem label={"Schema"} value={"Schema"}><details style={{}} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"status"} required={false} deprecated={undefined} schemaDescription={"CkptStatus is the status of a checkpoint.\n\n - CKPT_STATUS_ACCUMULATING: ACCUMULATING defines a checkpoint that is awaiting for BLS signatures.\n - CKPT_STATUS_SEALED: SEALED defines a checkpoint that has accumulated sufficient BLS signatures.\n - CKPT_STATUS_SUBMITTED: SUBMITTED defines a checkpoint that is included on BTC.\n - CKPT_STATUS_CONFIRMED: CONFIRMED defines a checkpoint that is k-deep on BTC.\n - CKPT_STATUS_FINALIZED: FINALIZED defines a checkpoint that is w-deep on BTC."} schemaName={"string"} qualifierMessage={"**Possible values:** [`CKPT_STATUS_ACCUMULATING`, `CKPT_STATUS_SEALED`, `CKPT_STATUS_SUBMITTED`, `CKPT_STATUS_CONFIRMED`, `CKPT_STATUS_FINALIZED`]"} defaultValue={"CKPT_STATUS_ACCUMULATING"}></SchemaItem></ul></details></TabItem><TabItem label={"Example (from schema)"} value={"Example (from schema)"}><ResponseSamples responseExample={"{\n  \"status\": \"CKPT_STATUS_ACCUMULATING\"\n}"} language={"json"}></ResponseSamples></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem><TabItem label={"default"} value={"default"}><div>
+
+An unexpected error response.
+
+</div><div><MimeTabs schemaType={"response"}><TabItem label={"*/*"} value={"*/*"}><SchemaTabs><TabItem label={"Schema"} value={"Schema"}><details style={{}} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"error"} required={false} deprecated={undefined} schemaDescription={undefined} schemaName={"string"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"code"} required={false} deprecated={undefined} schemaDescription={undefined} schemaName={"int32"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"message"} required={false} deprecated={undefined} schemaDescription={undefined} schemaName={"string"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={true} className={"schemaItem"}><details style={{}}><summary style={{}}><strong>details</strong><span style={{"opacity":"0.6"}}> object[]</span></summary><div style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"type_url"} required={false} deprecated={undefined} schemaDescription={undefined} schemaName={"string"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"value"} required={false} deprecated={undefined} schemaDescription={undefined} schemaName={"byte"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem></div></details></SchemaItem></ul></details></TabItem><TabItem label={"Example (from schema)"} value={"Example (from schema)"}><ResponseSamples responseExample={"{\n  \"error\": \"string\",\n  \"code\": 0,\n  \"message\": \"string\",\n  \"details\": [\n    {\n      \"type_url\": \"string\",\n      \"value\": \"string\"\n    }\n  ]\n}"} language={"json"}></ResponseSamples></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem></ApiTabs></div>
+      
