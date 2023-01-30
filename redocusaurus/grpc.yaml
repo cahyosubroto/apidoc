@@ -132,7 +132,10 @@ paths:
           format: uint64
   /babylon/btccheckpoint/v1/{epoch_num}/submissions:
     get:
+      summary: submissions
       operationId: EpochSubmissions
+      tags:
+        - BTCCheckpoint
       responses:
         '200':
           description: A successful response.
@@ -296,8 +299,6 @@ paths:
           in: query
           required: false
           type: boolean
-      tags:
-        - Query
   /babylon/btclightclient/v1/baseheader:
     get:
       operationId: BaseHeader
