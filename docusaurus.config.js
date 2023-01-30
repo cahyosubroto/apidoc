@@ -62,7 +62,7 @@ const config = {
         specs: [
           {
             id: 'grpc',
-            spec: 'docs/grpc/grpcapi/swagger.yml',
+            spec: 'swagger.yml',
             route: '/restapi/v1',
           },
         ],
