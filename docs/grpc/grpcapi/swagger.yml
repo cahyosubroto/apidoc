@@ -6,19 +6,19 @@ info:
 
 servers:
   - url: https://docs.babylonchain.io/api
-  description: Production Server
+    description: Production Server
 
 tags:
   - name: BTCCheckpoint
-  description: The REST API for the BTC Checkpoint RPC Gateway module.
+    description: The REST API for the BTC Checkpoint RPC Gateway module.
   - name: BTCLightClient
-  description: The REST API for the BTC Light Client RPC Gateway module.
+    description: The REST API for the BTC Light Client RPC Gateway module.
   - name: Epoching
-  description: The REST API for the Epoching RPC Gateway module.
+    description: The REST API for the Epoching RPC Gateway module.
   - name: Checkpointing
-  description: The REST API for the Checkpointing RPC Gateway module.
+    description: The REST API for the Checkpointing RPC Gateway module.
   - name: ZoneConcierge
-  description: The REST API for the Zone Concierge RPC Gateway module.
+    description: The REST API for the Zone Concierge RPC Gateway module.
 
 paths:
   /babylon/btccheckpoint/v1/params:
