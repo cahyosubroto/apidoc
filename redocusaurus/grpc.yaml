@@ -20,9 +20,12 @@ tags:
 paths:
   /babylon/btccheckpoint/v1/params:
     get:
-      summary: Parameters queries the parameters of the module.
+      summary: params
+      description: Parameters queries the parameters of the module.
       operationId: BtcCheckpointParams
-    x-codeSamples:
+      tags:
+        - BTCCheckpoint
+      x-codeSamples: null
       responses:
         '200':
           description: A successful response.
@@ -84,8 +87,6 @@ paths:
                     value:
                       type: string
                       format: byte
-      tags:
-        - BTCCheckpoint
   /babylon/btccheckpoint/v1/{epoch_num}:
     get:
       summary: >-
