@@ -63,7 +63,7 @@ const config = {
           {
             id: 'grpc',
             spec: 'docs/grpc/grpcapi/swagger.yml',
-            route: '/restapi/grpc',
+            route: '/restapi/v1',
           },
         ],
         // Theme Options for modifying how redoc renders them
