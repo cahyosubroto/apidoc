@@ -88,9 +88,8 @@ paths:
                       value:
                         type: string
                         format: byte
-              description: >-
-                  QueryParamsResponse is response type for the Query/Params RPC
-                  method.
+        description: >-
+          QueryParamsResponse is response type for the Query/Params RPC method.
   /babylon/btccheckpoint/v1/{epoch_num}:
     get:
       summary: epoch_num
