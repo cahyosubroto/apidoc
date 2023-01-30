@@ -29,6 +29,7 @@ paths:
 
       tags:
         - BTCCheckpoint
+        
       x-codeSamples:
       responses:
         '200':
