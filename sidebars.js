@@ -77,7 +77,7 @@ const sidebars = {
       label:"Parameters queries the parameters of the module.",
       className:"api-method get"
     },
-    'grpcrestapi',
+    //'grpcrestapi',
     // {
     //   type: 'category',
     //   label: 'gRPC Gateway (REST API)',
