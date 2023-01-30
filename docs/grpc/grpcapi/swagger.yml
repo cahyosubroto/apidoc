@@ -87,7 +87,7 @@ paths:
                       format: byte
   /babylon/btccheckpoint/v1/{epoch_num}:
     get:
-      summary:
+      summary: epoch_num
       description: >-
         BtcCheckpointHeight returns earliest block height for given
         rawcheckpoint
@@ -138,8 +138,6 @@ paths:
           required: true
           type: string
           format: uint64
-      tags:
-        - Query
   /babylon/btccheckpoint/v1/{epoch_num}/submissions:
     get:
       operationId: EpochSubmissions
