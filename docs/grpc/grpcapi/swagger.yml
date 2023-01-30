@@ -3,11 +3,28 @@ info:
   title: Babylon - gRPC Gateway docs
   description: A REST interface for state queries
   version: 1.0.0
+servers:
+  - url: https://docs.babylonchain.io/api
+  description: Production Server
+
+tags:
+  - name: BTCCheckpoint
+    description: The REST API for the BTC Checkpoint RPC Gateway module.
+  - name: BTCLightClient
+    description: The REST API for the BTC Light Client RPC Gateway module.
+  - name: Epoching
+    description: The REST API for the Epoching RPC Gateway module.
+  - name: Checkpointing
+    description: The REST API for the Checkpointing RPC Gateway module.
+  - name: ZoneConcierge
+    description: The REST API for the Zone Concierge RPC Gateway module.
+
 paths:
   /babylon/btccheckpoint/v1/params:
     get:
       summary: Parameters queries the parameters of the module.
       operationId: BtcCheckpointParams
+      x-codeSamples:
       responses:
         '200':
           description: A successful response.
@@ -70,7 +87,7 @@ paths:
                       type: string
                       format: byte
       tags:
-        - Query
+        - BTCCheckpoint
   /babylon/btccheckpoint/v1/{epoch_num}:
     get:
       summary: >-
