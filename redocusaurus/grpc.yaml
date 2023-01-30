@@ -62,9 +62,6 @@ paths:
                         checkpoints
 
                         (w in research paper)
-          description: >-
-            QueryParamsResponse is response type for the Query/Params RPC
-            method.
           default:
             description: An unexpected error response.
             schema:
