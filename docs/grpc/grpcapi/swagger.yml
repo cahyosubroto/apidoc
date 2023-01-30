@@ -29,10 +29,8 @@ paths:
       tags:
         - BTCCheckpoint
       x-codeSamples:
+        - lang: 'cURL'
         responses:
-          description: >-
-                  QueryParamsResponse is response type for the Query/Params RPC
-                  method.
           '200':
             description: A successful response.
             schema:
@@ -90,6 +88,9 @@ paths:
                       value:
                         type: string
                         format: byte
+              description: >-
+                  QueryParamsResponse is response type for the Query/Params RPC
+                  method.
   /babylon/btccheckpoint/v1/{epoch_num}:
     get:
       summary: epoch_num
