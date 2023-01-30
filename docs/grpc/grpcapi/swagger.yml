@@ -3,6 +3,7 @@ info:
   title: Babylon - gRPC Gateway docs
   description: A REST interface for state queries
   version: 1.0.0
+
 servers:
   - url: https://docs.babylonchain.io/api
   description: Production Server
