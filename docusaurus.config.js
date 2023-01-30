@@ -99,7 +99,7 @@ const config = {
             label: 'Docs',
           },
           {
-            to: '/restapi',
+            to: '/restapi/',
             position: 'left',
             label: 'API',
           },
