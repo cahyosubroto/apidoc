@@ -99,7 +99,7 @@ const config = {
             label: 'Docs',
           },
           {
-            docId: 'grpcrestapi',
+            to: 'grpcrestapi',
             position: 'left',
             label: 'API',
           },
