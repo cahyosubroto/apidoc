@@ -24,7 +24,8 @@ paths:
     get:
       summary: Parameters queries the parameters of the module.
       operationId: BtcCheckpointParams
-      x-codeSamples:
+    
+    x-codeSamples:
       responses:
         '200':
           description: A successful response.
