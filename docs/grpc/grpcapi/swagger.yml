@@ -29,7 +29,7 @@ paths:
 
       tags:
         - BTCCheckpoint
-        
+
       x-codeSamples:
       responses:
         '200':
@@ -92,8 +92,6 @@ paths:
                     value:
                       type: string
                       format: byte
-      tags:
-        - BTCCheckpoint
   /babylon/btccheckpoint/v1/{epoch_num}:
     get:
       summary: >-
