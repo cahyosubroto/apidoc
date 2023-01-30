@@ -28,8 +28,6 @@ paths:
       operationId: BtcCheckpointParams
       tags:
         - BTCCheckpoint
-      x-codeSamples:
-        - lang: cURL
       responses:
         '200':
           description: A successful response.
