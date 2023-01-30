@@ -99,7 +99,7 @@ const config = {
             label: 'Docs',
           },
           {
-            to: '/restapi/',
+            docId: 'grpcrestapi',
             position: 'left',
             label: 'API',
           },
