@@ -26,78 +26,79 @@ paths:
       summary: params
       description: Parameters queries the parameters of the module.
       operationId: BtcCheckpointParams
-
       tags:
         - BTCCheckpoint
-
       x-codeSamples:
-      responses:
-        '200':
-          description: A successful response.
-          schema:
-            type: object
-            properties:
-              params:
-                description: params holds all the parameters of this module.
-                type: object
-                properties:
-                  btc_confirmation_depth:
-                    type: string
-                    format: uint64
-                    title: >-
-                      btc_confirmation_depth is the confirmation depth in BTC.
-
-                      A block is considered irreversible only when it is at
-                      least k-deep in BTC
-
-                      (k in research paper)
-                  checkpoint_finalization_timeout:
-                    type: string
-                    format: uint64
-                    title: >-
-                      checkpoint_finalization_timeout is the maximum time window
-                      (measured in BTC blocks) between a checkpoint
-
-                      - being submitted to BTC, and
-
-                      - being reported back to BBN
-
-                      If a checkpoint has not been reported back within w BTC
-                      blocks, then BBN has dishonest majority and is stalling
-                      checkpoints
-
-                      (w in research paper)
-            description: >-
-              QueryParamsResponse is response type for the Query/Params RPC
-              method.
-        default:
-          description: An unexpected error response.
-          schema:
-            type: object
-            properties:
-              error:
-                type: string
-              code:
-                type: integer
-                format: int32
-              message:
-                type: string
-              details:
-                type: array
-                items:
+        responses:
+          description: >-
+                  QueryParamsResponse is response type for the Query/Params RPC
+                  method.
+          '200':
+            description: A successful response.
+            schema:
+              type: object
+              properties:
+                params:
+                  description: params holds all the parameters of this module.
                   type: object
                   properties:
-                    type_url:
+                    btc_confirmation_depth:
                       type: string
-                    value:
+                      format: uint64
+                      title: >-
+                        btc_confirmation_depth is the confirmation depth in BTC.
+
+                        A block is considered irreversible only when it is at
+                        least k-deep in BTC
+
+                        (k in research paper)
+                    checkpoint_finalization_timeout:
                       type: string
-                      format: byte
+                      format: uint64
+                      title: >-
+                        checkpoint_finalization_timeout is the maximum time window
+                        (measured in BTC blocks) between a checkpoint
+
+                        - being submitted to BTC, and
+
+                        - being reported back to BBN
+
+                        If a checkpoint has not been reported back within w BTC
+                        blocks, then BBN has dishonest majority and is stalling
+                        checkpoints
+
+                        (w in research paper)
+          default:
+            description: An unexpected error response.
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                code:
+                  type: integer
+                  format: int32
+                message:
+                  type: string
+                details:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      type_url:
+                        type: string
+                      value:
+                        type: string
+                        format: byte
   /babylon/btccheckpoint/v1/{epoch_num}:
     get:
-      summary: >-
+      summary: epoch_num
+      description: >-
         BtcCheckpointHeight returns earliest block height for given
         rawcheckpoint
       operationId: BtcCheckpointHeight
+      tags:
+        - BTCCheckpoint
       responses:
         '200':
           description: A successful response.
@@ -142,8 +143,6 @@ paths:
           required: true
           type: string
           format: uint64
-      tags:
-        - Query
   /babylon/btccheckpoint/v1/{epoch_num}/submissions:
     get:
       operationId: EpochSubmissions
