@@ -560,8 +560,6 @@ paths:
           required: false
           type: string
           format: byte
-      tags:
-        - Query
   /babylon/btclightclient/v1/containsBytes:
     get:
       summary: containsBytes
