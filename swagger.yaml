@@ -8857,6 +8857,8 @@ paths:
         ListHeaders queries the headers of a chain in Babylon's view, with
         pagination support
       operationId: ListHeaders
+      tags:
+        - ZoneConcierge
       responses:
         '200':
           description: A successful response.
